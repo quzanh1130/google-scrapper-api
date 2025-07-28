@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  google_search: 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: google_search
+    environment:
+      TZ: Asia/Ho_Chi_Minh # Set the timezone environment variable
+    ports:
+      - "8386:8386"
