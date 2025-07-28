@@ -61,7 +61,7 @@ Perform a Google search with optional parameters.
 
 ### Basic Search (No Proxy)
 ```bash
-curl -X POST "http://localhost:3636/search" \
+curl -X POST "http://localhost:8386/search" \
   -H "Content-Type: application/json" \
   -d '{
     "query": "python programming"
@@ -70,7 +70,7 @@ curl -X POST "http://localhost:3636/search" \
 
 ### Search with Custom Proxy
 ```bash
-curl -X POST "http://localhost:3636/search" \
+curl -X POST "http://localhost:8386/search" \
   -H "Content-Type: application/json" \
   -d '{
     "query": "python programming",
@@ -80,7 +80,7 @@ curl -X POST "http://localhost:3636/search" \
 
 ### Search with All Parameters
 ```bash
-curl -X POST "http://localhost:3636/search" \
+curl -X POST "http://localhost:8386/search" \
   -H "Content-Type: application/json" \
   -d '{
     "query": "python programming",
@@ -101,10 +101,10 @@ docker build -t google-search-api .
 
 2. Run the container:
 ```bash
-docker run -p 3636:3636 google-search-api
+docker run -p 8386:8386 google-search-api
 ```
 
-3. Access the API at `http://localhost:3636`
+3. Access the API at `http://localhost:8386`
 
 ## Development
 
@@ -120,7 +120,7 @@ playwright install firefox
 
 3. Run the development server:
 ```bash
-uvicorn app.main:app --host 0.0.0.0 --port 3636 --reload
+uvicorn app.main:app --host 0.0.0.0 --port 8386 --reload
 ```
 
 ## Notes
